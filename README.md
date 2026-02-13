@@ -1,12 +1,27 @@
-# Dispersion-Compensation
 # Dispersion Compensation
 
 ## Objective
 Design and simulate a fiber optic system using dispersion-compensating fiber to reduce chromatic dispersion.
 
 ## Theory
-<img width="1398" height="500" alt="image" src="https://github.com/user-attachments/assets/a922bb4a-e871-4643-96a5-b78350cfb8d1" />
+Dispersion-compensating fiber (DCF) provides an optical medium with a relatively large negative chromatic dispersion factor \(D(\lambda)\) at the operating wavelength.  
 
+If a transmission fiber of length \(L_{TF}\) is connected in series with a DCF of length \(L_{DCF}\), then the total chromatic dispersion is given by:
+
+\[
+\Delta D_t(\lambda) = D_{TF}(\lambda) \cdot L_{TF} + D_{DCF}(\lambda) \cdot L_{DCF} \cdot \Delta \lambda
+\]
+
+where:
+- \(D_{TF}(\lambda)\) = chromatic dispersion factor for the transmission fiber  
+- \(D_{DCF}(\lambda)\) = chromatic dispersion factor for the DCF  
+- \(\Delta \lambda\) = transmitter spectral width  
+
+Similarly, the total attenuation loss of the two-fiber combination is:
+
+\[
+Loss = A_{TF} \cdot L_{TF} + A_{DCF} \cdot L_{DCF}
+\]
 
 Therefore, given target values for chromatic dispersion and attenuation loss plus specifications of the transmitter, fiber, and receiver, one can determine the lengths of the transmission fiber and the DCF by solving the above two equations simultaneously.
 
@@ -71,6 +86,13 @@ The main physical components of this layout are:
 ## Further Simulation and Analysis
 - Set the DCF length to 0 and run the simulation again.  
 - Record similar measurements for comparison.  
+
+![WhatsApp Image 2026-02-13 at 7 12 52 PM](https://github.com/user-attachments/assets/21065e8e-4202-40e5-9be6-af892d87ced0)
+
+## Graph
+<img width="1919" height="1079" alt="Screenshot 2026-02-04 092100" src="https://github.com/user-attachments/assets/1787b8ca-40b8-4bd5-8c31-6c70c73a8ba6" />
+<img width="1919" height="1079" alt="Screenshot 2026-02-04 092135" src="https://github.com/user-attachments/assets/5fa09dba-5dce-49bd-81b6-b3902331cb9b" />
+
 
 ---
 
